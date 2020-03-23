@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 export default {
   mode: 'universal',
@@ -34,7 +35,7 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
   /*
   ** Nuxt.js modules
@@ -70,5 +71,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  env: {
+    baseWP: process.env.BASE_WP
   }
 }
